@@ -20,6 +20,8 @@ Simply type up your note, and press save!
 ## Finished Product
 View the deployed version via Heroku: 
 
+![Sample photo](Capture.JPG)
+
 ## Technologies
 HTML
 CSS

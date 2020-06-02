@@ -35,5 +35,19 @@ module.exports = function (app) {
   // DELETE request
   app.delete('/api/notes/:noteId', function(req, res) {
     const noteId = req.params.noteId;
+
+    console.log(noteId);
+
+    let notes = notes.filter(note => {
+        return note.id === noteId;
+    })[0];
+
+    console.log(notes);
+    const index = notes.indexOf(note);
+
+    notes.splice(index, 1);
+
+    fs.writeFileSync('./db/db.json', JSON.stringify(notes), 'utf8');
+    res.json("You have deleted your note successfully.");
   });
 };
