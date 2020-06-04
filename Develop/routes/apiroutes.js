@@ -38,16 +38,15 @@ module.exports = function (app) {
 
     console.log(noteId);
 
-    let notes = notes.filter(note => {
-        return note.id === noteId;
-    })[0];
+  var notes = JSON.parse(fs.readFileSync(path.join(__dirname, '../db/db.json')));
+
+  notes = notes.filter(note => {
+        return note.id !== noteId;
+    });
 
     console.log(notes);
-    const index = notes.indexOf(note);
 
-    notes.splice(index, 1);
-
-    fs.writeFileSync('./db/db.json', JSON.stringify(notes), 'utf8');
+    fs.writeFileSync(__dirname+ '/../db/db.json', JSON.stringify(notes));
     res.json("You have deleted your note successfully.");
   });
 };
