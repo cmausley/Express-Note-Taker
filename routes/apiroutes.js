@@ -46,7 +46,7 @@ module.exports = function (app) {
 
     console.log(notes);
 
-    fs.writeFileSync(__dirname+ '/../db/db.json', JSON.stringify(notes));
+    fs.writeFileSync(__dirname+ '../db/db.json', JSON.stringify(notes));
     res.json("You have deleted your note successfully.");
   });
 };
