@@ -18,7 +18,7 @@ Building this program has taught me much more about shifting into back end web d
 Simply type up your note, and press save!
 
 ## Finished Product
-View the deployed version via Heroku: 
+View the deployed version via Heroku: https://git.heroku.com/serene-bayou-19127.git
 
 ![Sample photo](Capture.JPG)
 
